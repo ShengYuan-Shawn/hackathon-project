@@ -3,17 +3,22 @@
 
 $font-weight: (
   "regular": 400,
-  "bold": 700,
+  "bold": 600,
   "heavy": 900,
 );
 
 $primary-color: #ffffff;
 $secondary-color: #d61c4e;
+$menu-btn-color: #1b262c;
+$menu-btn-hover-color: #009dff;
 
 // Body Stlying
 * {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+}
+
+.body {
+  margin: auto;
 }
 
 // Navigation Bar Styling
@@ -23,17 +28,81 @@ $secondary-color: #d61c4e;
   justify-content: space-around;
   align-items: center;
   background-color: $primary-color;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
 
-.nav-left {
+.nav-middle ul {
   display: flex;
-  font-weight: map-get($font-weight, "bold");
+  list-style: none;
+}
+
+.nav-middle ul li {
+  width: 140px;
+  color: $menu-btn-color;
+  font-weight: map-get($font-weight, bold);
   font-family: "Poppins";
+  text-transform: uppercase;
 }
 
-.search-bar {
-  display: flex;
+.nav-middle ul li:hover {
+  color: $menu-btn-hover-color;
+  cursor: pointer;
+}
+
+// .nav-right {
+//   width: 320px;
+// }
+
+// .search-bar {
+//   display: flex;
+//   border: 2px solid $menu-btn-color;
+//   border-radius: 0.2rem;
+// }
+
+// .search-bar button {
+//   font-size: 14px;
+//   padding: 12px;
+//   width: 30%;
+//   outline: none;
+//   border: none;
+//   color: $primary-color;
+//   background-color: $menu-btn-color;
+// }
+
+// .search-bar button:hover {
+//   color: $menu-btn-hover-color;
+//   cursor: pointer;
+// }
+
+// .search-bar input {
+//   font-size: 14px;
+//   padding: 12px;
+//   outline: none;
+//   border: none;
+//   background-color: transparent;
+//   width: 70%;
+// }
+
+// Tile Card Styling
+.heroTile_img {
+  display: inline-flex;
+  flex-direction: row;
+
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border: 4px;
+}
+
+.heroTile_name {
+  max-width: 200px;
+  text-align: center;
+  margin: 12px 0px;
+}
+
+.display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 // Footer Styling

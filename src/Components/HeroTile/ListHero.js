@@ -1,6 +1,6 @@
 import React from "react";
 import Service from "../service/Service";
-import HeroTile from "./HeroTile/HeroTile";
+import HeroTile from "./HeroTile";
 
 function HeroList() {
   const [hero, setHero] = React.useState([]);

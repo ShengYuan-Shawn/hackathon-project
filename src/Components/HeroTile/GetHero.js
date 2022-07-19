@@ -1,9 +1,10 @@
 import React from "react";
 import Service from "../service/Service";
+import HeroTile from "./HeroTile";
 // import getHeroByName from ""
 
 function GetHero() {
-  const [hero, setHero] = React.useState({});
+  const [hero, setHero] = React.useState(undefined);
   const regInput = React.useRef(null);
 
   const getHero = () => {
@@ -11,10 +12,11 @@ function GetHero() {
 
     Service.getHeroById(inputValue).then((Heroes) => {
       setHero(Heroes);
+      console.log(Heroes);
     });
     console.log(hero);
   };
-
+  console.log("Check");
   return (
     <div>
       <input
@@ -35,7 +37,7 @@ function GetHero() {
         Send Request
       </button>
 
-      <p>{hero.name}</p>
+      {hero && <HeroTile hero={hero} />}
     </div>
   );
 }

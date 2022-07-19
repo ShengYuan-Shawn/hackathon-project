@@ -3,21 +3,22 @@ import logo from "../assets/logo.svg";
 
 const Header = () => {
   return (
-    <nav>
+    <div className="header-container">
       <div className="nav-container">
-        <div className="nav">
-          <div className="nav-left">
-            <img src={logo} className="app-logo" alt="App Logo" />
-          </div>
+        <div className="nav-left">
+          <img src={logo} className="app-logo" alt="App Logo" />
         </div>
-        <div className="nav-right">
-          <div className="search-bar">
-            <input type="text" placeholder="Type here" />
-            <button>Search</button>
-          </div>
+
+        <div className="nav-middle">
+          <ul>
+            <li>Home</li>
+            <li>Heroes</li>
+            <li>Forum</li>
+            <li>About</li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
