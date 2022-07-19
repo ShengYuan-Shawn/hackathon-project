@@ -49,40 +49,6 @@ $menu-btn-hover-color: #009dff;
   cursor: pointer;
 }
 
-// .nav-right {
-//   width: 320px;
-// }
-
-// .search-bar {
-//   display: flex;
-//   border: 2px solid $menu-btn-color;
-//   border-radius: 0.2rem;
-// }
-
-// .search-bar button {
-//   font-size: 14px;
-//   padding: 12px;
-//   width: 30%;
-//   outline: none;
-//   border: none;
-//   color: $primary-color;
-//   background-color: $menu-btn-color;
-// }
-
-// .search-bar button:hover {
-//   color: $menu-btn-hover-color;
-//   cursor: pointer;
-// }
-
-// .search-bar input {
-//   font-size: 14px;
-//   padding: 12px;
-//   outline: none;
-//   border: none;
-//   background-color: transparent;
-//   width: 70%;
-// }
-
 // Tile Card Styling
 .heroTile_img {
   display: inline-flex;
@@ -106,3 +72,41 @@ $menu-btn-hover-color: #009dff;
 }
 
 // Footer Styling
+.footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: column 2/1;
+  justify-content: baseline;
+  align-items: flex-start;
+  min-height: 20vh;
+  width: 100%;
+}
+
+.about-content h3,
+.about-content p {
+  font-family: "Poppins";
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu ul li {
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+.nav-menu ul li:hover {
+  color: $menu-btn-hover-color;
+  cursor: pointer;
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-content p {
+  font-family: "Poppins";
+}
