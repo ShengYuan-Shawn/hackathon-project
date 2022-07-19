@@ -1,37 +1,24 @@
-// Declaring Variables
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap";
-
-$font-weight: (
-  "regular": 400,
-  "bold": 700,
-  "heavy": 900,
-);
-
-$primary-color: #ffffff;
-$secondary-color: #d61c4e;
-
-// Body Stlying
 * {
   margin: 0;
   padding: 0;
 }
 
-// Navigation Bar Styling
 .nav-container {
   height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: $primary-color;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nav-left {
   display: flex;
-  font-weight: map-get($font-weight, "bold");
+  font-weight: 700;
   font-family: "Poppins";
 }
 
 .search-bar {
   display: flex;
-}
+} /*# sourceMappingURL=style.css.map */

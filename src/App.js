@@ -1,9 +1,12 @@
-import React from "react";
-import DataFetching from "./DataFetching";
-import "./App.css";
+import "./style.css";
+import Header from "./Components/Header/Header";
 
 function App() {
-  return <DataFetching />;
+  return (
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
