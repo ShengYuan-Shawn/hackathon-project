@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroTile.css";
 
-export default function HeroTile({ hero }) {
+function HeroTile({ hero }) {
   return (
     <div className="display-container">
       <img className="heroTile_img" src={hero.images.md} />
@@ -9,3 +9,5 @@ export default function HeroTile({ hero }) {
     </div>
   );
 }
+
+export default HeroTile;

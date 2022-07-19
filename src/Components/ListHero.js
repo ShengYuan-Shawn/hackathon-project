@@ -2,12 +2,12 @@ import React from "react";
 import Service from "../service/Service";
 import HeroTile from "./HeroTile/HeroTile";
 
-function ListHero() {
-  const [heroes, setHero] = React.useState([]);
+function HeroList() {
+  const [hero, setHero] = React.useState([]);
 
   const getAllHeroes = () => {
     Service.getAllHero().then((response) => {
-      setHero(response);
+      setHeroes(response);
     });
   };
 
@@ -17,10 +17,11 @@ function ListHero() {
 
   return (
     <div>
-      {heroes.map((hero) => {
-        return <HeroTile hero={hero} key={hero.id} />;
+      {hero.map((hero) => {
+        <HeroTile hero={hero} key={hero.id} />;
       })}
     </div>
   );
 }
-export default ListHero;
+
+export default HeroList;

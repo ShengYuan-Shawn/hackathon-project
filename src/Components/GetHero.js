@@ -6,7 +6,7 @@ function GetHero() {
   const [hero, setHero] = React.useState({});
   const regInput = React.useRef(null);
 
-  const getAHero = () => {
+  const getHero = () => {
     const inputValue = regInput.current.value;
 
     Service.getHeroById(inputValue).then((Heroes) => {
@@ -30,7 +30,7 @@ function GetHero() {
       <button
         type="submit"
         className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        onClick={getAHero}
+        onClick={getHero}
       >
         Send Request
       </button>
