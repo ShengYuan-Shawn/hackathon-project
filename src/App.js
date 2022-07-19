@@ -1,10 +1,10 @@
-import "./App.css";
-import DataFetching from "./DataFetching";
+import "./style.css";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <Header />
     </div>
   );
 }
