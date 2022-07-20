@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <div className="nav-container">
+      <nav className="nav-container">
         <div className="nav-left">
           <img src={logo} className="app-logo" alt="App Logo" />
         </div>
@@ -20,7 +20,7 @@ const Header = () => {
             <li onClick={() => navigate("/about")}>About</li>
           </ul>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

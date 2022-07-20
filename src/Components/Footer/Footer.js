@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { FaFacebookSquare, FaDiscord, FaTwitterSquare } from "react-icons/fa";
 const Footer = () => {
   const navigate = useNavigate();
 
@@ -14,6 +14,16 @@ const Footer = () => {
           </ul>
         </div>
 
+        <div className="page-directory">
+          <p>Explore More</p>
+          <ul>
+            <li>Home</li>
+            <li>Heroes</li>
+            <li>Forum</li>
+            <li>About</li>
+          </ul>
+        </div>
+
         <div className="contact-details">
           <p>Support</p>
           <ul>
@@ -24,7 +34,15 @@ const Footer = () => {
         <div className="social-media">
           <p>Social Media</p>
           <ul>
-            <li></li>
+            <li>
+              <FaFacebookSquare />
+            </li>
+            <li>
+              <FaDiscord />
+            </li>
+            <li>
+              <FaTwitterSquare />
+            </li>
           </ul>
         </div>
       </div>

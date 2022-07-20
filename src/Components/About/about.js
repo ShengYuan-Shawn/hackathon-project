@@ -22,8 +22,8 @@ const About = () => {
           </div>
 
           <div className="about-content-middle">
+            <h4>More About Us -</h4>
             <br />
-            <h4>More About Us</h4>
             <p>
               We're a group of fresh graduate that came from different study
               fields, and we have try to create an web application, SuperoCo
@@ -34,6 +34,7 @@ const About = () => {
             <br />
             <br />
             <h4>Developers Wannabe -</h4>
+            <br />
             <p>Amir Bin Ahmad, Farah Afiqah, Lim Sheng Yuan</p>
           </div>
         </div>

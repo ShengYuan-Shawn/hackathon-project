@@ -73,21 +73,19 @@ $menu-btn-color: #1b262c;
 }
 
 // About Styling
+.about-container {
+  padding: 0 40px;
+}
+
 .about-content {
   height: 80vh;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
-.about-header,
-.about-content-left,
-.about-content-middle {
-  margin: auto;
-}
-
 .about-header p {
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Poppins";
   font-weight: 600;
   transform: rotateZ(270deg);
@@ -100,16 +98,17 @@ $menu-btn-color: #1b262c;
 }
 
 .about-content img {
-  width: 600px;
+  width: 580px;
 }
 
 .about-content-middle {
   font-family: "Poppins";
+  width: 40%;
 }
 
 .about-content-middle h4 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 // Footer Styling
@@ -119,14 +118,15 @@ footer {
 }
 
 .footer-container {
+  padding: 80px;
   position: relative;
   display: flex;
-  margin: 0;
-  padding: 0;
-  min-height: 24vh;
+  justify-content: space-around;
+  min-height: 18vh;
 }
 
 .about-desc p,
+.page-directory p,
 .contact-details p,
 .social-media p {
   font-family: "Poppins";
@@ -137,6 +137,7 @@ footer {
 }
 
 .about-desc ul,
+.page-directory ul,
 .contact-details ul,
 .social-media ul {
   list-style: none;
@@ -145,6 +146,7 @@ footer {
 }
 
 .about-desc ul li,
+.page-directory ul li,
 .contact-details ul li,
 .social-media ul li {
   font-size: 16px;
@@ -153,6 +155,7 @@ footer {
 }
 
 .about-desc ul li:hover,
+.page-directory ul li:hover,
 .contact-details ul li:hover,
 .social-media ul li:hover {
   color: $menu-btn-color;
