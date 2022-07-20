@@ -10,3 +10,5 @@ const About = () => {
     </footer>
   );
 };
+
+export default About;

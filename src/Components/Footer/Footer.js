@@ -6,7 +6,10 @@ const Footer = () => {
       <div className="footer-container">
         <div className="about-content">
           <h3>About Us</h3>
-          <p>We're a group of developers</p>
+          <p>
+            We're a group of fresh graduate's developer wannabe <br />
+            trying todeveloper a superhero codex app using REST API.
+          </p>
         </div>
         <div className="nav-menu">
           <ul>
