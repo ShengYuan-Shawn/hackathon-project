@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/home";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
-import Heroes from "./Components/HeroTile/heroes";
+import Header from "./Components/Navbar/navbar";
+import Footer from "./Components/Footer/footer";
+import Heroes from "./Components/Heroes/heroes";
 import Forum from "./Components/Forum/forum";
 import About from "./Components/About/about";
 import "./style.scss";

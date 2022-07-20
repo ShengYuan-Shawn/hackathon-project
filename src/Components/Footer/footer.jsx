@@ -17,10 +17,8 @@ const Footer = () => {
         <div className="page-directory">
           <p>Explore More</p>
           <ul>
-            <li>Home</li>
             <li>Heroes</li>
             <li>Forum</li>
-            <li>About</li>
           </ul>
         </div>
 
@@ -35,10 +33,14 @@ const Footer = () => {
           <p>Social Media</p>
           <ul>
             <li>
-              <FaFacebookSquare />
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <FaFacebookSquare />
+              </a>
             </li>
             <li>
-              <FaDiscord />
+              <a href="https://www.youtube.com/watch?v=J2GVKuYoIww">
+                <FaDiscord />
+              </a>
             </li>
             <li>
               <FaTwitterSquare />

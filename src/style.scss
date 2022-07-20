@@ -78,7 +78,7 @@ $menu-btn-color: #1b262c;
 }
 
 .about-content {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,11 +118,18 @@ footer {
 }
 
 .footer-container {
-  padding: 80px;
+  padding: 40px 60px;
   position: relative;
   display: flex;
   justify-content: space-around;
-  min-height: 18vh;
+  min-height: 16vh;
+}
+
+.social-media ul li {
+  display: inline;
+  font-size: 28px;
+  color: $primary-color;
+  padding: 0 10px 0 0;
 }
 
 .about-desc p,
@@ -147,8 +154,7 @@ footer {
 
 .about-desc ul li,
 .page-directory ul li,
-.contact-details ul li,
-.social-media ul li {
+.contact-details ul li {
   font-size: 16px;
   font-family: "Poppins";
   color: $primary-color;
