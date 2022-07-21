@@ -45,32 +45,95 @@ $menu-btn-color: #1b262c;
   font-weight: map-get($font-weight, bold);
   font-family: "Poppins";
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
 }
 
 .nav-middle ul li::after {
   content: "";
   background-color: $secondary-color;
+  width: 80%;
+  height: 130%;
+  border-radius: 40px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
 }
 
 .nav-middle ul li:hover {
-  color: $secondary-color;
+  color: $primary-color;
   cursor: pointer;
+}
+
+.nav-middle ul li:hover::after {
+  top: 50%;
+  opacity: 1;
 }
 
 // Home Styling
 .home-container {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  background: url(Components/assets/landing-page.png);
-  background-repeat: no-repeat;
-  background-size: 1920px 800px;
+  position: relative;
+  height: 180vh;
+  background: linear-gradient(#000028, #602d3a);
+}
+
+.animation img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.animation img#stars {
+  padding-top: 20px;
+}
+
+.animation img#city {
+  padding-top: 20px;
+}
+
+.animation img#men {
+  width: 340px;
+  padding-top: 1240px;
+}
+
+.animation img#women {
+  width: 340px;
+  margin-left: -800px;
+  padding-top: 1240px;
+}
+
+.scroll-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  padding-top: 380px;
+  text-align: center;
+}
+
+.scroll-down h3 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 54px;
+  color: $primary-color;
+  padding: 10px 300px;
 }
 
 .landing-content {
-  height: 40vh;
-  padding: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  padding: 1210px 60px 0;
   text-align: center;
 }
 
@@ -85,7 +148,7 @@ $menu-btn-color: #1b262c;
 .landing-content p {
   font-family: "Poppins";
   color: $primary-color;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   padding: 10px 420px 50px;
 }
@@ -125,7 +188,8 @@ $menu-btn-color: #1b262c;
   font-size: 50px;
   font-family: "Poppins";
   font-weight: 600;
-  border-bottom: 2px solid $secondary-color;
+  border-bottom: 3px solid $secondary-color;
+  border-radius: 6px;
   transform: rotateZ(270deg);
   text-transform: uppercase;
 }
