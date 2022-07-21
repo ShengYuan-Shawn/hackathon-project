@@ -6,11 +6,13 @@ import men from "../assets/men.png";
 import women from "../assets/women.png";
 
 const Home = () => {
-  //reference to the start
+  // Reference to the start
   const starRef = React.useRef();
   const menRef = React.useRef();
   const womenRef = React.useRef();
 
+  /* Using use effect to check current ref state,
+   if no then run the function when scroll */
   React.useEffect(() => {
     if (!starRef.current || !menRef.current || !womenRef.current) return;
     function ___() {
@@ -33,6 +35,14 @@ const Home = () => {
       </section>
       <div className="scroll-down">
         <h3>Scroll Down</h3>
+        <div className="scroll-btn">
+          <div className="mouse">
+            <span></span>
+          </div>
+          <div className="arrow">
+            <span></span>
+          </div>
+        </div>
       </div>
       <div className="landing-content">
         <h2>

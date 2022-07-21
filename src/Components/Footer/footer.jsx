@@ -48,7 +48,9 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <FaTwitterSquare />
+              <a href="https://www.youtube.com/watch?v=bMknfKXIFA8">
+                <FaTwitterSquare />
+              </a>
             </li>
           </ul>
         </div>
