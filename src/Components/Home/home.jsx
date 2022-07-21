@@ -15,14 +15,14 @@ const Home = () => {
    if no then run the function when scroll */
   React.useEffect(() => {
     if (!starRef.current || !menRef.current || !womenRef.current) return;
-    function ___() {
+    function animationValue() {
       let value = window.scrollY;
       starRef.current.style.top = `${value * 0.75}px`;
       menRef.current.style.left = `${value * 1.32}px`;
       womenRef.current.style.left = `${value * 0.75}px`;
     }
-    window.addEventListener("scroll", ___);
-    return () => window.removeEventListener("scroll", ___);
+    window.addEventListener("scroll", animationValue);
+    return () => window.removeEventListener("scroll", animationValue);
   }, [starRef, menRef, womenRef]);
 
   return (
