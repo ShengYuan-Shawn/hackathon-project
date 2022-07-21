@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebookSquare, FaDiscord, FaTwitterSquare } from "react-icons/fa";
 const Footer = () => {
   const navigate = useNavigate();
@@ -7,18 +7,24 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <div className="about-desc">
+        <div className="abEout-desc">
           <p>About Us</p>
           <ul>
-            <li OnClick={() => navigate("/about")}>Who we are</li>
+            <li>
+              <Link to={"/about"}>Who we are</Link>
+            </li>
           </ul>
         </div>
 
         <div className="page-directory">
           <p>Explore More</p>
           <ul>
-            <li>Heroes</li>
-            <li>Forum</li>
+            <li>
+              <Link to={"/heroes"}>Heroes</Link>
+            </li>
+            <li>
+              <Link to={"/forum"}>Forum</Link>
+            </li>
           </ul>
         </div>
 

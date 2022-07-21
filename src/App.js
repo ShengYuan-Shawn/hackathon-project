@@ -14,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainPageLayout />}>
+            <Route path="/heroes" element={<Heroes />} />
+            <Route path="/forum" element={<Forum />} />
+            <Route path="/about" element={<About />} />
             <Route path="" element={<Home />} />
-            <Route path="heroes" element={<Heroes />} />
-            <Route path="forum" element={<Forum />} />
-            <Route path="about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>

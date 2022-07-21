@@ -40,10 +40,17 @@ $menu-btn-color: #1b262c;
 
 .nav-middle ul li {
   width: 140px;
+  display: inline-block;
   color: $menu-btn-color;
   font-weight: map-get($font-weight, bold);
   font-family: "Poppins";
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-middle ul li::after {
+  content: "";
+  background-color: $secondary-color;
 }
 
 .nav-middle ul li:hover {
@@ -88,13 +95,9 @@ $menu-btn-color: #1b262c;
   font-size: 50px;
   font-family: "Poppins";
   font-weight: 600;
+  border-bottom: 2px solid $secondary-color;
   transform: rotateZ(270deg);
   text-transform: uppercase;
-}
-
-.about-header hr {
-  border: 2px solid $secondary-color;
-  border-radius: 5px;
 }
 
 .about-content img {
@@ -155,6 +158,8 @@ footer {
 .about-desc ul li,
 .page-directory ul li,
 .contact-details ul li {
+  list-style: none;
+  text-decoration: none;
   font-size: 16px;
   font-family: "Poppins";
   color: $primary-color;
