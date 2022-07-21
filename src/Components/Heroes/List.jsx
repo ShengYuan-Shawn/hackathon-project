@@ -10,6 +10,7 @@ function List() {
   const [filteredHeroes, setFilteredHeroes] = React.useState([]);
 
   const getAllHeroes = () => {
+    setLoading(true);
     Service.getAllHero()
       .then((response) => {
         setHeroes(response);

@@ -10,16 +10,11 @@ class Service {
       .then((response) => response.data);
   }
 
-  /**
-   * Get the hero info by id
-   * @param heroId id of hero to obtain
-   * @returns the promise which resolves to the obtained data
-   */
   getHeroById(heroId) {
     return axios
       .get(`${SUPERHERO_API}/id/${heroId}.json`, {
         headers: {
-          Accept: "application/json",
+          "Content-Type": "application/json",
         },
       })
       .then((response) => response.data);

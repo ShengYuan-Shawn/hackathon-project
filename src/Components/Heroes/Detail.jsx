@@ -6,6 +6,7 @@ import $ from "jquery";
 
 function Detail({ value }) {
   const [hero, setHero] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
 
   setTimeout(function start() {
     $(".bar").each(function (i) {
@@ -35,9 +36,11 @@ function Detail({ value }) {
   }, 500);
 
   const getAHero = (e) => {
+    setLoading(true);
     Service.getHeroById(e)
       .then((response) => {
         setHero(response);
+        setLoading(false);
       })
       .catch((e) => {
         console.log(e);
@@ -45,13 +48,9 @@ function Detail({ value }) {
   };
 
   React.useEffect(() => {
-    console.log(value);
+    setLoading(true);
     getAHero(value);
   }, []);
-
-  if (!hero) {
-    return <div>Loading</div>;
-  }
 
   return (
     <div className="main-container">
@@ -62,46 +61,55 @@ function Detail({ value }) {
         <h2>{hero?.appearance?.race}</h2>
       </div>
       <div className="detail-container">
-        <div class="appearance-container holder">
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.intelligence) + "%"}
-          >
-            <span class="label">Intelligence</span>
+        {!loading ? (
+          <div class="appearance-container holder">
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.intelligence) + "%"}
+            >
+              <span class="label">Intelligence</span>
+            </div>
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.strength) + "%"}
+            >
+              <span class="label light">strength</span>
+            </div>
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.speed) + "%"}
+            >
+              <span class="label">Speed</span>
+            </div>
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.durability) + "%"}
+            >
+              <span class="label light">Durabitlity</span>
+            </div>
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.power) + "%"}
+            >
+              <span class="label">Power</span>
+            </div>
+            <div
+              class="bar cf"
+              data-percent={String(hero?.powerstats?.combat) + "%"}
+            >
+              <span class="label light">Combat</span>
+            </div>
           </div>
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.strength) + "%"}
-          >
-            <span class="label light">strength</span>
-          </div>
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.speed) + "%"}
-          >
-            <span class="label">Speed</span>
-          </div>
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.durability) + "%"}
-          >
-            <span class="label light">Durabitlity</span>
-          </div>
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.power) + "%"}
-          >
-            <span class="label">Power</span>
-          </div>
-          <div
-            class="bar cf"
-            data-percent={String(hero?.powerstats?.combat) + "%"}
-          >
-            <span class="label light">Combat</span>
-          </div>
-        </div>
+        ) : (
+          <div>Loading...</div>
+        )}
+
         <div className="image-container ">
-          <img className="object-fill" src={hero?.images?.md} />
+          {!loading ? (
+            <img className="object-fill" src={hero?.images?.md} />
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
         <div className="stats-container">
           <ol className="appearance-list">
