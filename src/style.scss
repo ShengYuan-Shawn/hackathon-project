@@ -58,25 +58,55 @@ $menu-btn-color: #1b262c;
   cursor: pointer;
 }
 
-// Tile Card Styling
-.heroTile_img {
-  display: inline-flex;
-  flex-direction: row;
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border: 4px;
+// Home Styling
+.home-container {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  background: url(Components/assets/landing-page.png);
+  background-repeat: no-repeat;
+  background-size: 1920px 700px;
 }
 
-.heroTile_name {
-  max-width: 200px;
+.landing-content {
+  height: 40vh;
+  padding: 60px;
   text-align: center;
-  margin: 12px 0px;
 }
 
-.display-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.landing-content h2 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 46px;
+  color: $primary-color;
+  padding: 10px 300px;
+}
+
+.landing-content p {
+  font-family: "Poppins";
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 420px 50px;
+}
+
+.landing-content button {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 600;
+  color: $primary-color;
+  width: 300px;
+  height: 60px;
+  border-radius: 100px;
+  border: none;
+  background-color: rgb(255, 53, 53);
+  cursor: pointer;
+}
+
+.landing-content button:hover {
+  transform: scale(1.2);
+  background-color: rgb(255, 213, 0);
+  color: $menu-btn-color;
 }
 
 // About Styling
@@ -125,7 +155,7 @@ footer {
   position: relative;
   display: flex;
   justify-content: space-around;
-  min-height: 16vh;
+  min-height: 15vh;
 }
 
 .social-media ul li {
@@ -133,6 +163,15 @@ footer {
   font-size: 28px;
   color: $primary-color;
   padding: 0 10px 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: $menu-btn-color;
 }
 
 .about-desc p,
@@ -159,7 +198,6 @@ footer {
 .page-directory ul li,
 .contact-details ul li {
   list-style: none;
-  text-decoration: none;
   font-size: 16px;
   font-family: "Poppins";
   color: $primary-color;

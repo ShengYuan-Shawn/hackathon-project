@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 const Header = () => {
@@ -9,7 +9,9 @@ const Header = () => {
     <div className="header-container">
       <nav className="nav-container">
         <div className="nav-left">
-          <img src={logo} className="app-logo" alt="App Logo" />
+          <Link to={"/"}>
+            <img src={logo} className="app-logo" alt="App Logo" />
+          </Link>
         </div>
 
         <div className="nav-middle">

@@ -1,17 +1,24 @@
 import React from "react";
-import splashart from "../assets/landing-page.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  <div className="home-container">
-    <h2>Get To Know Your Favourite Superhero With Just A Click</h2>
-    <p>
-      Welcome to SuperoCo - where you can find out your favourite superhero name
-      and details with an image.
-    </p>
-    <button>Checkout A Superhero!</button>
-    <img src={splashart} className="landing-page-art" alt="landing-page-art" />
-    <splashart />
-  </div>;
+  return (
+    <div className="home-container">
+      <div className="landing-content">
+        <h2>
+          Everyone Has Their Own Superhero Inside Them Waiting To Be Discovered
+        </h2>
+        <p>
+          Welcome to SuperoCo - We target to create a superhero codex that
+          allows users to find their favourite superhero characters (Heroes,
+          Anti-Heroes or Villians) details and their backstory with ease.
+        </p>
+        <Link to={"/heroes"}>
+          <button>Checkout A Superhero!</button>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

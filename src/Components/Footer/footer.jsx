@@ -1,13 +1,12 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaDiscord, FaTwitterSquare } from "react-icons/fa";
-const Footer = () => {
-  const navigate = useNavigate();
 
+const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <div className="abEout-desc">
+        <div className="about-desc">
           <p>About Us</p>
           <ul>
             <li>
