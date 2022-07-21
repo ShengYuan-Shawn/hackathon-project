@@ -1,0 +1,96 @@
+.main-container {
+  display: grid;
+  padding: 3rem 0 7rem 0;
+}
+
+.hero-name-container {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.hero-race-container {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+  margin: 0.5rem 50rem 1rem 50rem;
+
+  color: aliceblue;
+  background-color: gray;
+
+  border-radius: 1rem;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.5rem 0;
+}
+
+.appearance-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 1rem;
+
+  list-style: none;
+  font-size: large;
+}
+
+.full-name {
+  font-size: xx-large;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5rem;
+
+  transform: perspective(1000px) rotateY(-35deg);
+  border-radius: 1rem;
+  transition: transform 1s ease 0s;
+  padding-right: 8rem;
+}
+
+.stats-container:hover {
+  transform: perspective(3000px) rotateY(0deg);
+}
+
+.appearance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 3rem;
+
+  transform: perspective(1000px) rotateY(35deg);
+  border-radius: 1rem;
+  transition: transform 1s ease 0s;
+}
+
+.appearance-container:hover {
+  transform: perspective(3000px) rotateY(0deg);
+}
+
+.stats-list {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+
+  list-style: none;
+  font-size: large;
+}

@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/footer";
 import Heroes from "./Components/Heroes/heroes";
 import Forum from "./Components/Forum/forum";
 import About from "./Components/About/about";
+import HeroesId from "./Components/Heroes/HeroesId";
 import "./style.scss";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/heroes" element={<Heroes />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/about" element={<About />} />
+            <Route path="/heroes/:heroesid" element={<HeroesId />} />
             <Route path="" element={<Home />} />
           </Route>
         </Routes>
