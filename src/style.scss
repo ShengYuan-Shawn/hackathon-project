@@ -134,6 +134,7 @@ $menu-btn-color: #1b262c;
 .animation img#men {
   width: 340px;
   padding-top: 1240px;
+  margin-left: 100px;
   @include largerMobile() {
     width: 280px;
     padding-top: 1100px;
@@ -153,7 +154,7 @@ $menu-btn-color: #1b262c;
 
 .animation img#women {
   width: 340px;
-  margin-left: -800px;
+  margin-left: -740px;
   padding-top: 1240px;
   @include largerMobile() {
     width: 280px;
