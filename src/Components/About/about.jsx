@@ -1,5 +1,5 @@
 import React from "react";
-import illustration from "../assets/dev.jpg";
+import groupPhoto from "../assets/group-photo.jpeg";
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
 
           <div className="about-content-left">
             <img
-              src={illustration}
+              src={groupPhoto}
               className="dev-illustration"
               alt="dev-illustration"
             />

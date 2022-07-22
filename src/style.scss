@@ -1,6 +1,12 @@
 // Declaring Variables
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap";
 
+@mixin largerMobile() {
+  @media screen and (max-width: 1300px) {
+    @content;
+  }
+}
+
 @mixin mediumMobile() {
   @media screen and (max-width: 1000px) {
     @content;
@@ -128,10 +134,20 @@ $menu-btn-color: #1b262c;
 .animation img#men {
   width: 340px;
   padding-top: 1240px;
+  @include largerMobile() {
+    width: 280px;
+    padding-top: 1100px;
+    margin-left: -500px;
+  }
   @include mediumMobile() {
     width: 240px;
     padding-top: 700px;
-    margin-left: -600px;
+    margin-left: -520px;
+  }
+  @include smallMobile() {
+    width: 180px;
+    padding-top: 700px;
+    margin-left: -780px;
   }
 }
 
@@ -139,10 +155,20 @@ $menu-btn-color: #1b262c;
   width: 340px;
   margin-left: -800px;
   padding-top: 1240px;
+  @include largerMobile() {
+    width: 280px;
+    padding-top: 1100px;
+    margin-left: -740px;
+  }
   @include mediumMobile() {
     width: 240px;
-    margin-left: -600px;
+    margin-left: -680px;
     padding-top: 700px;
+  }
+  @include smallMobile() {
+    width: 180px;
+    padding-top: 700px;
+    margin-left: -700px;
   }
 }
 
@@ -154,8 +180,14 @@ $menu-btn-color: #1b262c;
   width: 100%;
   padding-top: 380px;
   text-align: center;
+  @include largerMobile() {
+    padding-top: 240px;
+  }
   @include mediumMobile() {
-    padding-top: 180px;
+    padding-top: 220px;
+  }
+  @include smallMobile() {
+    padding-top: 140px;
   }
 }
 
@@ -256,10 +288,18 @@ $menu-btn-color: #1b262c;
   height: 50vh;
   padding: 1210px 60px 0;
   text-align: center;
+  @include largerMobile() {
+    position: absolute;
+    padding: 920px 10px 0;
+    text-align: center;
+  }
   @include mediumMobile() {
     position: absolute;
-    padding: 640px 0 0;
+    padding: 640px 100px 0;
     text-align: center;
+  }
+  @include smallMobile() {
+    padding-top: 520px;
   }
 }
 
@@ -397,6 +437,9 @@ $menu-btn-color: #1b262c;
   border-radius: 6px;
   transform: rotateZ(270deg);
   text-transform: uppercase;
+  @include largerMobile() {
+    font-size: 30px;
+  }
   @include mediumMobile() {
     transform: unset;
     font-size: 36px;
@@ -404,9 +447,9 @@ $menu-btn-color: #1b262c;
 }
 
 .about-content img {
-  width: 580px;
+  width: 480px;
   @include mediumMobile() {
-    width: 460px;
+    width: 400px;
     padding: 10px;
   }
 }
