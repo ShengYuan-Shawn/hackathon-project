@@ -1,36 +1,4 @@
-// Declaring Variables
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap";
-
-@mixin largerMobile() {
-  @media screen and (max-width: 1300px) {
-    @content;
-  }
-}
-
-@mixin mediumMobile() {
-  @media screen and (max-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin smallMobile() {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
-
-$font-weight: (
-  "thin": 200,
-  "regular": 400,
-  "bold": 600,
-  "heavy": 900,
-);
-
-$primary-color: #ffffff;
-$secondary-color: #5785e0;
-$menu-btn-color: #1b262c;
-
-// Body Stlying
 * {
   margin: 0;
 }
@@ -39,15 +7,16 @@ $menu-btn-color: #1b262c;
   margin: 0;
 }
 
-// Navigation Bar Styling
 .nav-container {
   height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: $primary-color;
+  background-color: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .nav-container {
     padding: 20px;
     height: 200px;
     flex-direction: column;
@@ -59,7 +28,9 @@ $menu-btn-color: #1b262c;
   list-style: none;
   padding: 0;
   margin: 0;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .nav-middle ul {
     flex-direction: column;
   }
 }
@@ -67,8 +38,8 @@ $menu-btn-color: #1b262c;
 .nav-middle ul li {
   width: 140px;
   display: inline-block;
-  color: $menu-btn-color;
-  font-weight: map-get($font-weight, bold);
+  color: #1b262c;
+  font-weight: 600;
   font-family: "Poppins";
   text-transform: uppercase;
   text-align: center;
@@ -76,14 +47,16 @@ $menu-btn-color: #1b262c;
   position: relative;
   z-index: 2;
   transition: color 0.5s;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .nav-middle ul li {
     margin: 10px 0 0 0;
   }
 }
 
 .nav-middle ul li::after {
   content: "";
-  background-color: $secondary-color;
+  background-color: #5785e0;
   width: 80%;
   height: 130%;
   border-radius: 40px;
@@ -96,7 +69,7 @@ $menu-btn-color: #1b262c;
 }
 
 .nav-middle ul li:hover {
-  color: $primary-color;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -105,12 +78,13 @@ $menu-btn-color: #1b262c;
   opacity: 1;
 }
 
-// Home Styling
 .home-container {
   position: relative;
   height: 180vh;
   background: linear-gradient(#000028, #602d3a);
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .home-container {
     height: 120vh;
   }
 }
@@ -135,20 +109,26 @@ $menu-btn-color: #1b262c;
   width: 340px;
   padding-top: 1240px;
   margin-left: 100px;
-  @include largerMobile() {
+}
+@media screen and (max-width: 1300px) {
+  .animation img#men {
     width: 280px;
     padding-top: 1100px;
     margin-left: -500px;
   }
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .animation img#men {
     width: 240px;
     padding-top: 700px;
-    margin-left: -400px;
+    margin-left: -520px;
   }
-  @include smallMobile() {
+}
+@media screen and (max-width: 640px) {
+  .animation img#men {
     width: 180px;
     padding-top: 700px;
-    margin-left: -680px;
+    margin-left: -740px;
   }
 }
 
@@ -156,20 +136,26 @@ $menu-btn-color: #1b262c;
   width: 340px;
   margin-left: -740px;
   padding-top: 1240px;
-  @include largerMobile() {
+}
+@media screen and (max-width: 1300px) {
+  .animation img#women {
     width: 280px;
     padding-top: 1100px;
     margin-left: -740px;
   }
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .animation img#women {
     width: 240px;
     margin-left: -680px;
     padding-top: 700px;
   }
-  @include smallMobile() {
+}
+@media screen and (max-width: 640px) {
+  .animation img#women {
     width: 180px;
     padding-top: 700px;
-    margin-left: -620px;
+    margin-left: -700px;
   }
 }
 
@@ -181,13 +167,19 @@ $menu-btn-color: #1b262c;
   width: 100%;
   padding-top: 380px;
   text-align: center;
-  @include largerMobile() {
+}
+@media screen and (max-width: 1300px) {
+  .scroll-down {
     padding-top: 240px;
   }
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .scroll-down {
     padding-top: 220px;
   }
-  @include smallMobile() {
+}
+@media screen and (max-width: 640px) {
+  .scroll-down {
     padding-top: 140px;
   }
 }
@@ -196,9 +188,11 @@ $menu-btn-color: #1b262c;
   font-family: "Poppins";
   font-weight: 650;
   font-size: 64px;
-  color: $primary-color;
+  color: #ffffff;
   padding: 10px 300px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .scroll-down h3 {
     font-size: 30px;
     padding: unset;
   }
@@ -216,14 +210,16 @@ $menu-btn-color: #1b262c;
 .mouse {
   width: 40px;
   height: 70px;
-  border: 3px solid $primary-color;
+  border: 3px solid #ffffff;
   border-radius: 32px;
   margin-bottom: 10px;
   display: flex;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .mouse {
     width: 20px;
     height: 40px;
-    border: 3px solid $primary-color;
+    border: 3px solid #ffffff;
     margin-bottom: unset;
   }
 }
@@ -231,12 +227,15 @@ $menu-btn-color: #1b262c;
 .mouse span {
   width: 16px;
   height: 16px;
-  background-color: $primary-color;
+  background-color: #ffffff;
   display: block;
   border-radius: 50%;
   margin: auto;
-  animation: wheel-animation 0.75s linear infinite;
-  @include mediumMobile() {
+  -webkit-animation: wheel-animation 0.75s linear infinite;
+          animation: wheel-animation 0.75s linear infinite;
+}
+@media screen and (max-width: 1000px) {
+  .mouse span {
     width: 10px;
     height: 10px;
   }
@@ -247,10 +246,22 @@ $menu-btn-color: #1b262c;
   width: 16px;
   height: 16px;
   border: 3px solid transparent;
-  border-right-color: $primary-color;
-  border-bottom-color: $primary-color;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
   transform: rotate(45deg);
-  animation: arrow-animation 0.5s alternate infinite;
+  -webkit-animation: arrow-animation 0.5s alternate infinite;
+          animation: arrow-animation 0.5s alternate infinite;
+}
+
+@-webkit-keyframes wheel-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
 }
 
 @keyframes wheel-animation {
@@ -263,7 +274,23 @@ $menu-btn-color: #1b262c;
     transform: translateY(1rem);
   }
 }
-
+@-webkit-keyframes arrow-animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes arrow-animation {
   0% {
     opacity: 0;
@@ -281,7 +308,6 @@ $menu-btn-color: #1b262c;
     opacity: 1;
   }
 }
-
 .landing-content {
   position: absolute;
   top: 0;
@@ -289,17 +315,23 @@ $menu-btn-color: #1b262c;
   height: 50vh;
   padding: 1210px 60px 0;
   text-align: center;
-  @include largerMobile() {
+}
+@media screen and (max-width: 1300px) {
+  .landing-content {
     position: absolute;
     padding: 920px 10px 0;
     text-align: center;
   }
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .landing-content {
     position: absolute;
     padding: 640px 100px 0;
     text-align: center;
   }
-  @include smallMobile() {
+}
+@media screen and (max-width: 640px) {
+  .landing-content {
     padding-top: 520px;
   }
 }
@@ -308,9 +340,11 @@ $menu-btn-color: #1b262c;
   font-family: "Poppins";
   font-weight: 700;
   font-size: 46px;
-  color: $primary-color;
+  color: #ffffff;
   padding: 10px 300px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .landing-content h2 {
     font-size: 30px;
     padding: 20px 60px;
   }
@@ -318,11 +352,13 @@ $menu-btn-color: #1b262c;
 
 .landing-content p {
   font-family: "Poppins";
-  color: $primary-color;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 500;
   padding: 10px 420px 50px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .landing-content p {
     font-size: 16px;
     padding: 20px 80px;
   }
@@ -332,14 +368,16 @@ $menu-btn-color: #1b262c;
   font-family: "Poppins";
   font-size: 18px;
   font-weight: 600;
-  color: $primary-color;
+  color: #ffffff;
   width: 300px;
   height: 60px;
   border-radius: 100px;
   border: none;
   background-color: rgb(255, 53, 53);
   cursor: pointer;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .landing-content button {
     font-size: 14px;
     width: 280px;
     height: 50px;
@@ -350,10 +388,9 @@ $menu-btn-color: #1b262c;
 .landing-content button:hover {
   transform: scale(1.2);
   background-color: rgb(255, 213, 0);
-  color: $menu-btn-color;
+  color: #1b262c;
 }
 
-// Forum Styling
 .forum-content {
   min-height: 100vh;
 }
@@ -364,7 +401,9 @@ $menu-btn-color: #1b262c;
   font-weight: 600;
   text-align: center;
   padding: 80px 0;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .form h4 {
     font-size: 40px;
     padding: 60px 0;
   }
@@ -376,7 +415,9 @@ $menu-btn-color: #1b262c;
   display: block;
   margin: 0 auto;
   text-align: center;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .form form {
     max-width: 340px;
   }
 }
@@ -386,7 +427,9 @@ $menu-btn-color: #1b262c;
   height: 40px;
   font-size: 18px;
   font-family: "Poppins";
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .form input {
     height: 30px;
   }
 }
@@ -396,7 +439,7 @@ $menu-btn-color: #1b262c;
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 600;
-  color: $primary-color;
+  color: #ffffff;
   width: 220px;
   height: 40px;
   border-radius: 100px;
@@ -408,13 +451,14 @@ $menu-btn-color: #1b262c;
 .form button:hover {
   transform: scale(1.1);
   background-color: rgb(255, 213, 0);
-  color: $menu-btn-color;
+  color: #1b262c;
 }
 
-// About Styling
 .about-container {
   padding: 0 40px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-container {
     padding: 20px;
   }
 }
@@ -424,7 +468,9 @@ $menu-btn-color: #1b262c;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-content {
     height: unset;
     flex-direction: column;
   }
@@ -434,14 +480,18 @@ $menu-btn-color: #1b262c;
   font-size: 50px;
   font-family: "Poppins";
   font-weight: 600;
-  border-bottom: 3px solid $secondary-color;
+  border-bottom: 3px solid #5785e0;
   border-radius: 6px;
   transform: rotateZ(270deg);
   text-transform: uppercase;
-  @include largerMobile() {
+}
+@media screen and (max-width: 1300px) {
+  .about-header p {
     font-size: 30px;
   }
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-header p {
     transform: unset;
     font-size: 36px;
   }
@@ -449,7 +499,9 @@ $menu-btn-color: #1b262c;
 
 .about-content img {
   width: 480px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-content img {
     width: 400px;
     padding: 10px;
   }
@@ -457,7 +509,9 @@ $menu-btn-color: #1b262c;
 
 .about-content-middle {
   width: 40%;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-content-middle {
     width: 70%;
   }
 }
@@ -466,23 +520,26 @@ $menu-btn-color: #1b262c;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 20px;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-content-middle h4 {
     font-size: 18px;
   }
 }
 
 .about-content-middle p {
   font-family: "Poppins";
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .about-content-middle p {
     font-size: 14px;
     padding: 0 0 20px;
   }
 }
 
-// Footer Styling
 footer {
   width: 100%;
-  background-color: $secondary-color;
+  background-color: #5785e0;
 }
 
 .footer-container {
@@ -491,7 +548,9 @@ footer {
   display: flex;
   justify-content: space-around;
   min-height: 15vh;
-  @include mediumMobile() {
+}
+@media screen and (max-width: 1000px) {
+  .footer-container {
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -502,7 +561,7 @@ footer {
 .social-media ul li {
   display: inline;
   font-size: 28px;
-  color: $primary-color;
+  color: #ffffff;
   padding: 0 10px 0 0;
 }
 
@@ -512,7 +571,7 @@ a {
 }
 
 a:hover {
-  color: $menu-btn-color;
+  color: #1b262c;
 }
 
 .about-desc p,
@@ -521,9 +580,9 @@ a:hover {
 .social-media p {
   font-family: "Poppins";
   font-size: 20px;
-  font-weight: map-get($font-weight, bold);
+  font-weight: 600;
   text-transform: uppercase;
-  color: $primary-color;
+  color: #ffffff;
 }
 
 .about-desc ul,
@@ -541,14 +600,14 @@ a:hover {
   list-style: none;
   font-size: 16px;
   font-family: "Poppins";
-  color: $primary-color;
+  color: #ffffff;
 }
 
 .about-desc ul li:hover,
 .page-directory ul li:hover,
 .contact-details ul li:hover,
 .social-media ul li:hover {
-  color: $menu-btn-color;
+  color: #1b262c;
   cursor: pointer;
 }
 
@@ -562,10 +621,9 @@ a:hover {
 .copyright-content p {
   font-family: "Poppins";
   font-size: 16px;
-  color: $primary-color;
+  color: #ffffff;
 }
 
-// Scrollbar Styling
 ::-webkit-scrollbar {
   width: 0.75rem;
   background-color: #f8f8f8;
@@ -573,10 +631,10 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $menu-btn-color;
+  background-color: #1b262c;
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #f24c4c;
-}
+}/*# sourceMappingURL=style.css.map */
