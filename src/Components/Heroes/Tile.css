@@ -1,7 +1,9 @@
 .hero-card {
   padding: 0;
   color: white;
-  margin: 1.25rem 0.25rem;
+  margin: 20px 14px;
+  border-radius: 10px;
+  height: 620px;
 }
 
 .hero-card:hover {
@@ -22,6 +24,11 @@
   align-items: center;
 }
 
+.hero-detail-container h3,
+.hero-detail-container h4 {
+  font-size: 12px;
+  padding: 0 0 2px 0;
+}
 .hero-name-container {
   color: black;
   font-size: xx-large;
